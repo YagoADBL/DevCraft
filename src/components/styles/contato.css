@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap');
+
+.contact-section {
+  width: 100%;
+  background-color: #f3f5f6; /* Fundo claro padrão */
+  padding: 80px 40px;
+  font-family: 'Inter', sans-serif;
+  color: #334155;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* Cabeçalho */
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 650px;
+}
+
+.contact-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2rem;
+  color: #0b1d3a;
+  letter-spacing: -1px;
+}
+
+.contact-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* Blocos de Conteúdo (Escuro e Claro) */
+.contact-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Bloco de Informações (Escuro) */
+.info-block {
+  background-color: #08172e;
+  border-bottom: 5px solid #102a45; /* Sombra sólida pixelada */
+  border-right: 5px solid #102a45;
+  padding: 40px;
+  border-radius: 4px;
+}
+
+.info-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.85rem;
+  color: #10b981; /* Verde esmeralda para o título do contato */
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot-icon {
+  width: 8px;
+  height: 8px;
+  background-color: #2563eb; /* Ponto azul */
+  display: inline-block;
+}
+
+.info-item-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.info-item-details {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-left: 16px; /* Espaçamento da dot-icon */
+}
+
+/* Bloco do Formulário (Claro) */
+.form-block {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-bottom: 5px solid #64748b; /* Sombra sólida pixelada */
+  border-right: 5px solid #64748b;
+  border-radius: 4px;
+  padding: 40px;
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 10px 10px; /* Padrão pontilhado do fundo */
+}
+
+/* Formulário e Inputs */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.input-group input,
+.input-group textarea {
+  background-color: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  padding: 12px 16px;
+  border-radius: 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #334155;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #2563eb; /* Borda azul ao focar */
+}
+
+.input-group textarea {
+  resize: vertical;
+}
+
+/* Botão de Enviar */
+.submit-button {
+  width: 100%;
+  max-width: 200px; /* Largura máxima do botão */
+  background-color: #10b981; /* Verde esmeralda */
+  color: #042f2e;
+  border: 1px solid #08172e; /* Borda escura sólida pixel */
+  border-bottom: 4px solid #08172e;
+  border-right: 4px solid #08172e;
+  padding: 14px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.2s;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+}
+
+/* Nota do Formulário */
+.form-note {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #64748b;
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .contact-blocks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}

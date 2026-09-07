@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container principal da primeira seção (Hero) */
+.hero-container {
+  /* Adiciona o espaço exato acima do Hero para descolar do Header */
+  margin-top: 80px; 
+  
+  /* Se você preferir dar mais respiro interno na seção */
+  padding-top: 40px; 
+}
+/* Container principal com fundo de grade e gradiente */
+.hero-container {
+  min-height: auto;
+  width: 100%;
+  background-color: #0b1d3a;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 10% 50%, #0d3843 0%, transparent 50%),
+    radial-gradient(circle at 90% 50%, #071329 0%, transparent 60%);
+  background-size: 30px 30px, 30px 30px, 100% 100%, 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
+/* Layout em duas colunas */
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Coluna Esquerda */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.hero-title span {
+  color: #10b981; /* Verde esmeralda pixelado */
+}
+
+.text-hero {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  max-width: 500px;
+}
+
+/* Botões */
+.btns {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.btn-primary {
+  background-color: #10b981;
+  color: #042f2e;
+  border: none;
+  padding: 14px 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: #0f2b48;
+  color: #ffffff;
+  border: 1px solid #1e3a5f;
+  padding: 14px 24px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #173b63;
+}
+
+/* Badges da Stack */
+.stack-badges {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background-color: rgba(15, 43, 72, 0.6);
+  border: 1px solid #1e3a5f;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: #10b981;
+  display: inline-block;
+}
+
+/* Coluna Direita (Card) */
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.card-dev {
+  background-color: #08172e;
+  border: 1px solid #102a45;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar-card {
+  width: 50px;
+  height: 50px;
+  background-color: #10b981;
+  clip-path: polygon(
+    0% 20%, 20% 20%, 20% 0%, 80% 0%, 80% 20%, 100% 20%,
+    100% 80%, 80% 80%, 80% 100%, 20% 100%, 20% 80%, 0% 80%
+  );
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.85rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.card-subtitle {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.65rem;
+  color: #64748b;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.card-description {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+}

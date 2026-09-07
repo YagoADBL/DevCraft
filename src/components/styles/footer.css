@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500&display=swap');
+
+.footer-container {
+  width: 100%;
+  background-color: #08172e; /* Fundo escuro azulado */
+  padding: 32px 40px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #102a45; /* Linha sutil de separação no topo */
+}
+
+.footer-content {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+}
+
+.logo-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #10b981; /* Verde esmeralda */
+  clip-path: polygon(
+    0% 20%, 20% 20%, 20% 0%, 80% 0%, 80% 20%, 100% 20%,
+    100% 80%, 80% 80%, 80% 100%, 20% 100%, 20% 80%, 0% 80%
+  );
+  display: inline-block;
+}
+
+.logo-text-white {
+  color: #ffffff;
+}
+
+.logo-text-blue {
+  color: #2563eb; /* Azul cobalto */
+}
+
+/* Texto de Copyright */
+.footer-copyright {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* Responsividade */
+@media (max-width: 650px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}

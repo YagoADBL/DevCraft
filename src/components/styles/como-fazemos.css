@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap');
+
+.how-section {
+  width: 100%;
+  background-color: #f3f5f6; /* Fundo claro padronizado */
+  padding: 80px 40px;
+  font-family: 'Inter', sans-serif;
+  color: #334155;
+  display: flex;
+  justify-content: center;
+}
+
+.how-container {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Cabeçalho */
+.how-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 650px;
+}
+
+.how-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2rem;
+  color: #0b1d3a;
+  letter-spacing: -1px;
+}
+
+.how-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* Diagrama Visual */
+.diagram-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.grid-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 56px);
+  grid-template-rows: repeat(2, 56px);
+  border: 4px solid #08172e;
+  background-color: #08172e;
+  gap: 2px;
+}
+
+.cell {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell.dark-cell {
+  background-color: #102a45;
+}
+
+.arrow-icon {
+  font-size: 1.5rem;
+  color: #08172e;
+  font-weight: bold;
+}
+
+.increment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 140px;
+}
+
+.increment-icon-box {
+  width: 64px;
+  height: 64px;
+  border: 4px solid #08172e;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.increment-text {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Ícones PixelArt do Diagrama */
+.pixel-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+.icon-blue-cross {
+  background-color: #2563eb;
+  clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%);
+}
+
+.icon-green-ring {
+  background-color: #10b981;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 25% 25%, 25% 75%, 75% 75%, 75% 25%, 25% 25%);
+}
+
+.icon-blue-star {
+  background-color: #2563eb;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+.icon-green-square {
+  border: 4px solid #10b981;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.icon-blue-dash {
+  background-color: #2563eb;
+  height: 6px;
+  width: 16px;
+}
+
+.icon-green-top {
+  background-color: #10b981;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+}
+
+/* Badges de Etapas */
+.stages-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stage-badge {
+  background-color: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.square-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  display: inline-block;
+}
+
+/* Descrição da Timeline */
+.timeline-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin-top: 20px;
+}
+
+/* Timeline Scrum */
+.scrum-timeline {
+  position: relative;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 40px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  border-top: 2px dashed #cbd5e1;
+  z-index: 1;
+}
+
+.steps-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  background-color: #08172e;
+  color: #10b981;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 2px;
+}
+
+.step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #64748b;
+  max-width: 200px;
+}
+
+/* Responsividade */
+@media (max-width: 850px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
