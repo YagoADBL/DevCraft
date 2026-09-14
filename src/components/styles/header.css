@@ -76,6 +76,12 @@
   color: #10b981;
 }
 
+/*feito para o texto não sumir no botão "Iniciar projeto" no menu mobile*/
+.header-mid a.btn-inicio:hover {
+  color: #0b2238;
+  opacity: 1;
+}
+
 /* Direita: Botão "Iniciar projeto" */
 .header-right .btn-inicio {
   display: inline-block;
@@ -90,8 +96,27 @@
   box-shadow: 0 4px 0px #047857; /* Borda 3D inferior escura */
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
+/*Botao "Iniciar projeto" no menu mobile*/
+.nav-cta-mobile .btn-inicio {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  background-color: #10b981; /* Verde principal do botão */
+  color: #0b2238; /* Texto escuro combinando com o fundo */
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 0px #047857; /* Borda 3D inferior escura */
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
 
 .header-right .btn-inicio:hover {
+  transform: translateY(-1px);
+}
+
+.nav-cta-mobile .btn-inicio:hover {
   transform: translateY(-1px);
 }
 
@@ -99,14 +124,132 @@
   transform: translateY(2px);
   box-shadow: 0 2px 0px #047857;
 }
+.nav-cta-mobile .btn-inicio:active {
+   transform: translateY(2px);
+  box-shadow: 0 2px 0px #047857;
+}
+/* Botão hambúrguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000000;
+  padding: 0;
+}
 
-/* Responsividade Básica */
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Transforma as 3 barrinhas em um "X" quando o menu está aberto*/
+.menu-toggle.is-active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Camada escura atrás do menu aberto, para fechar ao tocar fora*/
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999998;
+}
+
+.nav-cta-mobile {
+  display: none;
+}
+
+/* Responsividade */
 @media (max-width: 850px) {
   .main-header {
     padding: 0 1.5rem;
   }
 
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Esconde o botão de "Iniciar projeto", aparece apenas no menu*/
+  .header-right {
+    display: none;
+  }
+
+  /* Menu vira um painel que desliza a partir do topo*/
   .header-mid {
-    display: none; /* Oculta menu em telas muito pequenas */
+    position: fixed;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    width: min(300px, 80vw);
+    overflow-y: auto;
+    background-color: #0b2238;
+    border-left: 1px solid #102a45;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
+    z-index: 999999;
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+  }
+
+  .header-mid.is-open {
+    transform: translateX(0);
+  }
+
+  .header-mid ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 1.5rem;
+  }
+
+  .header-mid ul li {
+    width: 100%;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #102a45;
+  }
+
+  .header-mid ul li:last-child {
+    border-bottom: none;
+  }
+
+  .header-mid a {
+    display: block;
+  }
+
+  .nav-cta-mobile {
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .nav-cta-mobile .btn-inicio {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand-name {
+    font-size: 1rem;
   }
 }
